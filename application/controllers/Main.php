@@ -125,13 +125,13 @@ class Main extends CI_Controller{
 
  }
  //상품 출력
- public function list(){
-   $mm = $_GET['list'];
-   $this->load->model('Main_model');
-   $listdata['list'] = $this->Main_model->list($mm);
-
-   $this->load->view('list.html',$listdata);
- }
+ // public function list(){
+ //   $mm = $_GET['list'];
+ //   $this->load->model('Main_model');
+ //   $listdata['list'] = $this->Main_model->list($mm);
+ //
+ //   $this->load->view('list.html',$listdata);
+ // }
  //관리 메인페이지
  public function management(){
 
