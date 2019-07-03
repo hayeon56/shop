@@ -62,11 +62,11 @@ class Main_model extends CI_model{
 
 
   //상품리스트 보여주기
-  function list($mm){
-$listdata = $this->db->get_where('product',array('pro_category'=>$mm))->result();
-   return $listdata;
-
-  }
+//   function list($mm){
+// $listdata = $this->db->get_where('product',array('pro_category'=>$mm))->result();
+//    return $listdata;
+//
+//   }
   //상품 등록하기
 
   function productRegistration($productData){
