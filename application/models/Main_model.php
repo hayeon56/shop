@@ -77,7 +77,7 @@ $listdata = $this->db->get_where('product',array('pro_category'=>$mm))->result()
       'pro_name' => $productData['proName'],
       'pro_price' => $productData['proPrice'],
       'pro_detail' => $productData['proDetail'],
-      'pro_image' => '/image/'.$productData['proImage'],
+      'pro_image' => '/shop/image/'.$productData['proImage'],
       'pro_num' => $productData['proNum'],
 
     );
