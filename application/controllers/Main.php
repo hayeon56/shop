@@ -209,11 +209,12 @@ public function productController(){
             $qty[$del[$i]] = 0;
         }
       }
-
+      if($rowid){
        for($i=0; $i < count($rowid); $i++){
 
          $cart_data[$i] = array('qty'=>$qty[$i],'rowid'=>$rowid[$i]);
 
+       }
        }
 
        $this->cart->update($cart_data);     //$this->cart->update($data);
