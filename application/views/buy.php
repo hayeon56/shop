@@ -73,7 +73,7 @@
   <?php foreach ($this->cart->contents() as $ls){ ?>
     <input type="hidden" name="rowid[]" value="<?=$ls['rowid'] ?>">
     <tr>
-      <td><img width="100px" src=<?php=$ls['image'] ?>></td>
+      <td><img width="100px" src=<?=$ls['image'] ?>></td>
       <td><?=$ls['name'] ?></td>
       <td><?=$ls['price'] ?></td>
       <td><?=$ls['qty'] ?></td>

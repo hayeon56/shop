@@ -48,8 +48,8 @@ echo form_open('http://192.168.128.97/shop/index.php/Main/cartUpdate'); ?>
 
     <div class="center">
    <ul class="nav nav-tabs col-md-12">
-      <li role="presentation"><a href="/shop/index.php/Main/list?list=1">J-POP</a></li>
-      <li role="presentation"><a href="/shop/index.php/Main/list?list=2">K-POP</a></li>
+      <li role="presentation"><a href="/shop/index.php/Main/list?list=1">K-POP</a></li>
+      <li role="presentation"><a href="/shop/index.php/Main/list?list=2">J-POP</a></li>
       <li role="presentation" ><a href="/shop/index.php/Main/list?list=3">DVD・BLU-LAY</a></li>
       <li role="presentation" ><a href="/shop/index.php/Main/list?list=4">GOODS</a></li>
     </ul>
