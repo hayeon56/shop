@@ -129,7 +129,7 @@ class Main extends CI_Controller{
     $mm = $_GET['list'];
     $this->load->model('Main_model');
    $listdata['list'] = $this->Main_model->list($mm);
-
+   echo print_r($listdata);
     $this->load->view('list.php',$listdata);
  }
  //관리 메인페이지
