@@ -203,9 +203,11 @@ public function productController(){
        $rowid = $this->input->post('rowid');
        $del = $this->input->post('del');
 
+       if($del){
        for($i=0; $i < count($del); $i++) {
             $qty[$del[$i]] = 0;
         }
+      }
 
        for($i=0; $i < count($rowid); $i++){
 
