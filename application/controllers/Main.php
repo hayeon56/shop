@@ -228,17 +228,18 @@ public function productController(){
      $qty = $this->input->post('qty');
      $rowid = $this->input->post('rowid');
      $del = $this->input->post('del');
-
+     if($del){
      for($i=0; $i < count($del); $i++) {
           $qty[$del[$i]] = 0;
       }
-
+      }
+      if($rowid){
      for($i=0; $i < count($rowid); $i++){
 
        $cart_data[$i] = array('qty'=>$qty[$i],'rowid'=>$rowid[$i]);
 
      }
-
+   }
      $this->cart->update($cart_data);
 
     $this->load->view('buy.php');
