@@ -29,14 +29,14 @@
         </span>
       </div>
       <div class="botton test" style="z-index:100; position:relative;" >
-        <? $name = $this->session->userdata('userName');
-           if($name){?><a href="/shop/index.php/Main/logout">
-             <button type="button" class="btn btn-default">LOGOUT</button></a><?}else{?>
-               <a href="/shop/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?}?>
+        <?php $name = $this->session->userdata('userName');
+           if($name){ ?><a href="/shop/index.php/Main/logout">
+             <button type="button" class="btn btn-default">LOGOUT</button></a><?php }else{ ?>
+               <a href="/shop/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?php } ?>
         <a href="/shop/index.php/Main/cart"><button type="button" class="btn btn-default">CART</button></a>
-        <? $name = $this->session->userdata('userName');
+        <?php $name = $this->session->userdata('userName');
 
-        if($name){ echo "<p>$name"?>様こんにちは!</p><?}?>
+        if($name){ echo "<p>$name" ?>様こんにちは!</p><?php } ?>
       </div>
     </div>
 
@@ -61,11 +61,11 @@
   <section class="center">
     <?php foreach($list as $ls) : ?>
     <table class="table">
-      <td><img width="500px" height="500px" src="<?=$ls->pro_image?>"></td>
-      <td><h1><?=$ls->pro_name?></h1>
-          <h2>価格：<?=$ls->pro_price?>￥</h2>
-          <h3><?=$ls->pro_detail?></h3>
-          <p><a href="/shop/index.php/Main/cartController?pro_num=<?=$ls->pro_num?>" class="btn btn-primary" role="button" name="">カートに入れる</a>
+      <td><img width="500px" height="500px" src="<?=$ls->pro_image ?>"></td>
+      <td><h1><?=$ls->pro_name ?></h1>
+          <h2>価格：<?=$ls->pro_price ?>￥</h2>
+          <h3><?=$ls->pro_detail ?></h3>
+          <p><a href="/shop/index.php/Main/cartController?pro_num=<?=$ls->pro_num ?>" class="btn btn-primary" role="button" name="">カートに入れる</a>
             <a href="#" class="btn btn-default" role="button">お気に入り</a></p>
       </td>
     <?php endforeach ?>

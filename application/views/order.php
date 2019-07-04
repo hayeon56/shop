@@ -25,16 +25,16 @@
       <th>合計金額</th>
       <th>決済</th>
       <th>発送</th>
-    <? foreach ($list as $ls){?>
+    <?php foreach ($list as $ls){ ?>
       <tr>
-        <td><?=$ls->order_date?></td>
-        <td><a href="/shop/index.php/Main/orderInfo?num=<?=$ls->order_num?>"><?=$ls->order_num?></a></td>
+        <td><?=$ls->order_date ?></td>
+        <td><a href="/shop/index.php/Main/orderInfo?num=<?=$ls->order_num ?>"><?=$ls->order_num?></a></td>
         <td><?=$ls->order_name?></td>
         <td><?=$ls->order_price?></td>
         <td><p style="color:blue"><?=$ls->order_pay?></p></td>
         <td><p style="color:red"><?=$ls->order_status?></p></td>
       </tr>
-      <?}?>
+      <?php } ?>
    </table>
   </body>
 

@@ -30,39 +30,39 @@
         <td><?=$ls->order_proqty?></td>
         <td><?=$ls->order_subtotal?></td>
       </tr>
-      <?}?>
-      <? foreach ($list as $ls){?>
+      <?php } ?>
+      <?php foreach ($list as $ls){ ?>
       <tr>
         <td style="text-align:right" colspan="4">合計</td>
         <td><?=$ls->order_price?></td>
       </tr>
-     <?}?>
+     <?php } ?>
    </table>
 
    <h2>注文者情報</h2>
    <table class="table table-bordered">
-     <? foreach ($user as $ls){?>
+     <?php foreach ($user as $ls){ ?>
      <tr>
      <th>お名前</th>
-     <td><?=$ls->order_Uname?></td>
+     <td><?=$ls->order_Uname ?></td>
      </tr>
      <tr>
      <th>郵便番号</th>
-     <td><?=$ls->order_Upost?></td>
+     <td><?=$ls->order_Upost ?></td>
      </tr>
      <tr>
      <th>ご住所</th>
-     <td><?=$ls->order_Uadd?></td>
+     <td><?=$ls->order_Uadd ?></td>
      </tr>
      <tr>
      <th>電話番号</th>
-     <td><?=$ls->order_Uphone?></td>
+     <td><?=$ls->order_Uphone ?></td>
      </tr>
      <tr>
      <th>メールアドレス</th>
-     <td><?=$ls->order_Uemail?></td>
+     <td><?=$ls->order_Uemail ?></td>
      </tr>
-     <?}?>
+     <?php } ?>
   </table>
   <a href="/shop/index.php/Main/order"><button type="button" class="btn btn-default">戻る</button></a>
   </body>

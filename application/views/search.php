@@ -50,15 +50,15 @@
   </nav>
   <!--상품리스트 보여주기-->
   <article>
-<? $user_num = $this->session->userdata('userID'); ?>
+<?php $user_num = $this->session->userdata('userID'); ?>
 <?php foreach($list as $ls) : ?>
 <div class="center">
 <div class="nav nav-tabs col-md-3 test">
   <div class="thumbnail">
-    <a href="/shop/index.php/Main/proDetail?num=<?=$ls->pro_num?>"><img src=<?=$ls->pro_image?>></a>
+    <a href="/shop/index.php/Main/proDetail?num=<?=$ls->pro_num ?>"><img src=<?=$ls->pro_image ?>></a>
     <div class="caption">
-      <a href="/shop/index.php/Main/proDetail?num=<?=$ls->pro_num?>"><h3><?=$ls->pro_name?></h3></a>
-      <p><a href="/shop/index.php/Main/cartController?pro_num=<?=$ls->pro_num?>" class="btn btn-primary" role="button" name="">CART</a>
+      <a href="/shop/index.php/Main/proDetail?num=<?=$ls->pro_num ?>"><h3><?=$ls->pro_name ?></h3></a>
+      <p><a href="/shop/index.php/Main/cartController?pro_num=<?=$ls->pro_num ?>" class="btn btn-primary" role="button" name="">CART</a>
         <a href="#" class="btn btn-default" role="button">お気に入り</a></p>
     </div>
   </div>
