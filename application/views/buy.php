@@ -93,7 +93,7 @@
    $phoneNumber = $this->session->userdata('userPhonenum');
    $post = $this->session->userdata('userPost');
     ?>
-<form action="/index.php/Main/buyController" method="post" name="form1">
+<form action="shop/index.php/Main/buyController" method="post" name="form1">
 <h1>購入者情報</h1>
 <table class="table table-bordered">
   <tr>
