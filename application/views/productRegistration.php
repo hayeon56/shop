@@ -31,7 +31,6 @@
   <option value="1">K-POP</option>
   <option value="3">DVD・BLU-LAY</option>
   <option value="4">GOODS</option>
-  <option>あああ</option>
 </select>
 <br>
     <label for="exampleInputFile">画像アップロード</label>
