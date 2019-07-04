@@ -214,7 +214,7 @@ public function productController(){
        }
 
        $this->cart->update($cart_data);     //$this->cart->update($data);
-       redirect("./cartController");
+       $this->load->view('cart.php');
 
   }
 
