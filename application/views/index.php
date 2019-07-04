@@ -29,19 +29,21 @@
         </span>
       </div>
       <div class="botton test" style="z-index:100; position:relative;" >
-        <? $name = $this->session->userdata('userName');
+        <?php $name = $this->session->userdata('userName');
            if($name){?><a href="/shop/index.php/Main/logout">
-             <button type="button" class="btn btn-default">LOGOUT</button></a><?}else{?>
+             <button type="button" class="btn btn-default">LOGOUT</button></a><?php }else{?>
                <a href="/shop/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?}?>
         <a href="/shop/index.php/Main/cart"><button type="button" class="btn btn-default">CART</button></a>
-        <? $name = $this->session->userdata('userName');
+        <?php $name = $this->session->userdata('userName');
 
-        if($name){ echo "<p>$name"?>様こんにちは!</p><?}?>
+        if($name){ echo "<p>$name"?>様こんにちは!</p><?};?>
       </div>
     </div>
   </form>
 
 </header>
+
+
 
 <br><br><br><br>
 
