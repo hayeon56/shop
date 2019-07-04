@@ -30,13 +30,13 @@ echo form_open('http://localhost/index.php/Main/cartUpdate'); ?>
         </span>
       </div>
       <div class="botton test" style="z-index:100; position:relative;" >
-        <? $name = $this->session->userdata('userName');
-           if($name){?><a href="/index.php/Main/logout">
-             <button type="button" class="btn btn-default">LOGOUT</button></a><?}else{?><a href="/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?}?>
+        <?php $name = $this->session->userdata('userName');
+           if($name){ ?><a href="/index.php/Main/logout">
+             <button type="button" class="btn btn-default">LOGOUT</button></a><?php }else{ ?><a href="/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?php } ?>
         <a href="/shop/index.php/Main/cart"><button type="button" class="btn btn-default">CART</button></a>
-        <? $name = $this->session->userdata('userName');
+        <?php $name = $this->session->userdata('userName');
 
-        if($name){ echo "<p>$name"?>様こんにちは!</p><?}?>
+        if($name){ echo "<p>$name" ?>様こんにちは!</p><?php } ?>
       </div>
     </div>
 
@@ -71,19 +71,19 @@ echo form_open('http://localhost/index.php/Main/cartUpdate'); ?>
     <th>小計</th>
     <th>削除</th>
   </tr>
-  <? $i = 1; ?>
-  <? foreach ($this->cart->contents() as $ls){?>
+  <?php $i = 1; ?>
+  <?php foreach ($this->cart->contents() as $ls){ ?>
     <input type="hidden" name="rowid[]" value="<?=$ls['rowid']?>">
     <tr>
       <td><img width="100px" src=<?=$ls['image']?>></td>
-      <td><?=$ls['name']?></td>
-      <td><?=$ls['price']?></td>
+      <td><?php=$ls['name']?></td>
+      <td><?php=$ls['price']?></td>
       <td><input name="qty[]" type="text" value="<?=$ls['qty']?>" maxlenqth="2" size="2"></input></td>
-      <td><?=$ls['subtotal']?></td>
+      <td><?php=$ls['subtotal']?></td>
       <td><input type="checkbox" name="del[]" value="<?php echo $i - 1;?>" /></td>
     </tr>
-    <? $i++; ?>
-<?}?>
+    <?php $i++; ?>
+<?php } ?>
 <tr>
   <td style="text-align:right" colspan="5">Total</td>
   <td><?php echo $this->cart->format_number($this->cart->total()); ?></td>
