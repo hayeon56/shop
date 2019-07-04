@@ -16,14 +16,14 @@ class Main extends CI_Controller{
   {
       $this->load->model('Main_model');
       $newlist['list'] = $this->Main_model->newlist();
-       $this->load->view('index.html',$newlist);
+       $this->load->view('index.php',$newlist);
   }
 
 
   //로그인페이지보여주기
   public function login(){
 
-   $this->load->view('login.html');
+   $this->load->view('login.php');
 
   }
 
@@ -66,12 +66,12 @@ class Main extends CI_Controller{
      $this->load->model('Main_model');
      $newlist['list'] = $this->Main_model->newlist();
      echo "<script>alert('ログイン完了');</script>";
-     $this->load->view('index.html',$newlist);
+     $this->load->view('index.php',$newlist);
 
   }
   else{
     echo "<script>alert('ログイン失敗');</script>";
-    $this->load->view('login.html');
+    $this->load->view('login.php');
   }
 
  }
@@ -87,14 +87,14 @@ class Main extends CI_Controller{
    $this->load->model('Main_model');
    $newlist['list'] = $this->Main_model->newlist();
    echo "<script>alert('ログアウト完了');</script>";
-   $this->load->view('index.html',$newlist);
+   $this->load->view('index.php',$newlist);
  }
 
 
  //회원가입
  public function join(){
 
-   $this->load->view('join.html');
+   $this->load->view('join.php');
 
  }
 
@@ -117,10 +117,10 @@ class Main extends CI_Controller{
 
    if($temp){
 
-      $this->load->view('joinS.html');
+      $this->load->view('joinS.php');
    }
    else{
-      $this->load->view('login.html');
+      $this->load->view('login.php');
    }
 
  }
@@ -130,18 +130,18 @@ class Main extends CI_Controller{
     $this->load->model('Main_model');
    $listdata['list'] = $this->Main_model->list($mm);
 
-    $this->load->view('list.html',$listdata);
+    $this->load->view('list.php',$listdata);
  }
  //관리 메인페이지
  public function management(){
 
-   $this->load->view('management.html');
+   $this->load->view('management.php');
 
  }
 //상품등록페이지로드
  public function productRegistration(){
 
-   $this->load->view('productRegistration.html');
+   $this->load->view('productRegistration.php');
 
 
  }
@@ -162,18 +162,18 @@ public function productController(){
 
  if($temp){
    echo "<script>alert('登録完了');</script>";
-    $this->load->view('productRegistration.html');
+    $this->load->view('productRegistration.php');
  }
  else{
    echo "<script>alert('登録失敗');</script>";
-    $this->load->view('productRegistration.html');
+    $this->load->view('productRegistration.php');
   }
  }
 //카트페이지 로드
  public function cart(){
 
    $this->load->library('cart');
-  $this->load->view('cart.html');
+  $this->load->view('cart.php');
 
  }
 //카트 컨트롤러
@@ -192,7 +192,7 @@ public function productController(){
     $this->load->model('Main_model');
     $temp = $this->Main_model->cart($cart_data);
     //print_r($this->cart->contents());
-    $this->load->view('cart.html');
+    $this->load->view('cart.php');
 
  }
 //카트 업데이트
@@ -215,7 +215,7 @@ public function productController(){
        }
 
        $this->cart->update($cart_data);     //$this->cart->update($data);
-       $this->load->view('cart.html');
+       $this->load->view('cart.php');
 
   }
 
@@ -240,7 +240,7 @@ public function productController(){
 
      $this->cart->update($cart_data);
 
-    $this->load->view('buy.html');
+    $this->load->view('buy.php');
 
   }
   //구입정보 디비에 저장
@@ -289,7 +289,7 @@ public function productController(){
     echo "<script>alert('注文完了しました。ありがとうございます。(*_*)');</script>";
     $this->load->model('Main_model');
     $newlist['list'] = $this->Main_model->newlist();
-    $this->load->view('index.html',$newlist);
+    $this->load->view('index.php',$newlist);
 
   }
 
@@ -299,7 +299,7 @@ public function productController(){
     $this->load->model('Main_model');
     $orderdata['list'] = $this->Main_model->orderlist();
 
-    $this->load->view('order.html',$orderdata);
+    $this->load->view('order.php',$orderdata);
 
 
   }
@@ -315,7 +315,7 @@ public function productController(){
 
     $orderInfoData['list'] = $this->Main_model->orderInfolist($mm);
 
-    $this->load->view('orderInfo.html',$orderInfoData);
+    $this->load->view('orderInfo.php',$orderInfoData);
 
   }
   //商品詳細ページ
@@ -324,7 +324,7 @@ public function productController(){
     $mm = $_GET['num'];
     $this->load->model('Main_model');
     $proData['list'] = $this->Main_model->proDetail($mm);
-    $this->load->view('proDetail.html',$proData);
+    $this->load->view('proDetail.php',$proData);
 
   }
   //商品検索
@@ -333,13 +333,13 @@ public function productController(){
     $search = $this->input->post('search');
     $this->load->model('Main_model');
     $searchData['list'] = $this->Main_model->search($search);
-    $this->load->view('search.html',$searchData);
+    $this->load->view('search.php',$searchData);
 
   }
 
   public function aa(){
 
-    $this->load->view('aa.html');
+    $this->load->view('aa.php');
 
   }
 
