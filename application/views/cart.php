@@ -80,7 +80,7 @@ echo form_open('http://192.168.128.97/shop/index.php/Main/cartUpdate'); ?>
       <td><?=$ls['price'] ?></td>
       <td><input name="qty[]" type="text" value="<?=$ls['qty'] ?>" maxlenqth="2" size="2"></input></td>
       <td><?=$ls['subtotal']?></td>
-      <td><input type="checkbox" name="del[]" value="<? echo $i - 1;?>" /></td>
+      <td><input type="checkbox" name="del[]" value="<? echo $i - 1; ?>" /></td>
     </tr>
     <?php $i++; ?>
 <?php } ?>
