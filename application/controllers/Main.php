@@ -291,7 +291,7 @@ public function productController(){
     echo "<script>alert('注文完了しました。ありがとうございます。(*_*)');</script>";
     $this->load->model('Main_model');
     $newlist['list'] = $this->Main_model->newlist();
-    $this->load->view('main.php',$newlist);
+    $this->load->view('index.php',$newlist);
 
   }
 
