@@ -157,6 +157,8 @@ public function productController(){
   'proImage'=> $_POST['proImage']
  );
 
+ print_r($productData);
+
  $this->load->model('Main_model');
  $temp = $this->Main_model->productRegistration($productData);
 
