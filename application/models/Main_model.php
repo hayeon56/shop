@@ -121,7 +121,7 @@ $listdata = $this->db->get_where('product',array('pro_category'=>$mm))->result()
 
     $total = $this->cart->total();
 
-    $query = "INSERT INTO order_list (order_num, order_date, order_price, order_pay, order_state, order_name)
+    $query = "INSERT INTO order_list (order_num, order_date, order_price, order_pay, order_status, order_name)
                            VALUES (0, NOW(), $total, '$pay', '未発送', '$name');";
     $this->db->query($query);
 
