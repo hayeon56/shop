@@ -47,8 +47,8 @@
 
     <div class="center">
    <ul class="nav nav-tabs col-md-12">
-      <li role="presentation"><a href="/index.php/Main/list?list=1">J-POP</a></li>
-      <li role="presentation"><a href="/index.php/Main/list?list=2">K-POP</a></li>
+      <li role="presentation"><a href="/index.php/Main/list?list=1">K-POP</a></li>
+      <li role="presentation"><a href="/index.php/Main/list?list=2">J-POP</a></li>
       <li role="presentation" ><a href="/index.php/Main/list?list=3">DVD・BLU-LAY</a></li>
       <li role="presentation" ><a href="/index.php/Main/list?list=4">GOODS</a></li>
     </ul>
@@ -71,13 +71,13 @@
   </tr>
   <?php $i = 1; ?>
   <?php foreach ($this->cart->contents() as $ls){ ?>
-    <input type="hidden" name="rowid[]" value="<?php=$ls['rowid'] ?>">
+    <input type="hidden" name="rowid[]" value="<?=$ls['rowid'] ?>">
     <tr>
       <td><img width="100px" src=<?php=$ls['image'] ?>></td>
-      <td><?php=$ls['name'] ?></td>
-      <td><?php=$ls['price'] ?></td>
-      <td><?php=$ls['qty'] ?></td>
-      <td><?php=$ls['subtotal'] ?></td>
+      <td><?=$ls['name'] ?></td>
+      <td><?=$ls['price'] ?></td>
+      <td><?=$ls['qty'] ?></td>
+      <td><?=$ls['subtotal'] ?></td>
     </tr>
     <?php $i++; ?>
 <?php } ?>
