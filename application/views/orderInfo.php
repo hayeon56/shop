@@ -22,19 +22,19 @@
       <th>価格</th>
       <th>数量</th>
       <th>小計</th>
-    <? foreach ($pro as $ls){?>
+    <?php foreach ($pro as $ls){ ?>
       <tr>
-        <td><a href="/shop/index.php/Main/proDetail?num=<?=$ls->order_proNum?>"><?=$ls->order_proNum?></a></td>
-        <td><a href="/shop/index.php/Main/proDetail?num=<?=$ls->order_proNum?>"><?=$ls->order_pro?></a></td>
-        <td><?=$ls->order_proprice?></td>
-        <td><?=$ls->order_proqty?></td>
-        <td><?=$ls->order_subtotal?></td>
+        <td><a href="/shop/index.php/Main/proDetail?num=<?=$ls->order_proNum ?>"><?=$ls->order_proNum ?></a></td>
+        <td><a href="/shop/index.php/Main/proDetail?num=<?=$ls->order_proNum ?>"><?=$ls->order_pro ?></a></td>
+        <td><?=$ls->order_proprice ?></td>
+        <td><?=$ls->order_proqty ?></td>
+        <td><?=$ls->order_subtotal ?></td>
       </tr>
       <?php } ?>
       <?php foreach ($list as $ls){ ?>
       <tr>
         <td style="text-align:right" colspan="4">合計</td>
-        <td><?=$ls->order_price?></td>
+        <td><?=$ls->order_price ?></td>
       </tr>
      <?php } ?>
    </table>
