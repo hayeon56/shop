@@ -93,13 +93,14 @@ class Main extends CI_Controller{
 
  //회원가입
  public function join(){
-   echo "<script>alert('会員登録ありがとうございます。再度ログインお願いします(*_*)');</script>";
-   $this->load->view('login.php');
+
+   $this->load->view('join.php');
 
  }
 
  //회원가입 컨트롤러
  public function joinController(){
+
 
    $join_data = array(
    'userId'=> $_POST['U_id'],
@@ -116,8 +117,8 @@ class Main extends CI_Controller{
    $temp = $this->Main_model->join($join_data);
 
    if($temp){
-
-      $this->load->view('joinS.php');
+     echo "<script>alert('会員登録ありがとうございます。再度ログインお願いします(*_*)');</script>";
+      $this->load->view('login.php');
    }
    else{
       $this->load->view('login.php');
