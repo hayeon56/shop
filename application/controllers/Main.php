@@ -93,8 +93,8 @@ class Main extends CI_Controller{
 
  //회원가입
  public function join(){
-
-   $this->load->view('join.php');
+   echo "<script>alert('会員登録ありがとうございます。再度ログインお願いします(*_*)');</script>";
+   $this->load->view('login.php');
 
  }
 
