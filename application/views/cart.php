@@ -1,5 +1,5 @@
 <?php $this->load->helper('form');
-echo form_open('http://192.168.128.97/shop/index.php/Main/cartUpdate'); ?>
+echo form_open('http://192.168.128.142/shop/index.php/Main/cartUpdate'); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
