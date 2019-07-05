@@ -27,8 +27,8 @@
       </div>
       <div class="botton test" style="z-index:100; position:relative;" >
         <?php $name = $this->session->userdata('userName');
-           if($name){ ?><a href="/index.php/Main/logout">
-             <button type="button" class="btn btn-default">LOGOUT</button></a><?php }else{ ?><a href="/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?php } ?>
+           if($name){ ?><a href="/shop/index.php/Main/logout">
+             <button type="button" class="btn btn-default">LOGOUT</button></a><?php }else{ ?><a href="/shop/index.php/Main/login"><button type="button" class="btn btn-default">LOGIN</button></a><?php } ?>
         <a href="/shop/index.php/Main/cart"><button type="button" class="btn btn-default">CART</button></a>
         <?php $name = $this->session->userdata('userName');
 
